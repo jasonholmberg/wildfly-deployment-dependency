@@ -1,0 +1,4 @@
+
+dependencies {
+  providedCompile project(':app1')
+}

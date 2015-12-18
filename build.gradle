@@ -1,0 +1,21 @@
+subprojects {
+  
+  apply plugin: 'war'
+  
+  repositories {
+    mavenLocal()
+    jcenter()
+  }
+  
+  dependencies {
+    providedCompile 'javax:javaee-api:7.0'
+  }
+  
+  task deploy(type: Copy) {
+    dependsOn war
+    from "$buildDir/libs"
+    include "*.war"
+    into "$wildflyHome/standalone/deployments"
+  }
+  
+}
