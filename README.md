@@ -1,7 +1,9 @@
-# WildFly inter-war dependency problem when module is optional
+# WildFly inter-war dependency problem when module is optional but present
 
 This project is provide a simple illustration of how an inter-war dependency can cause a war deployment to fail when the war it has 
-declared an a dependency through jboss-deployment-structure.xml is redeployed and all the dependent modules are `optional="true"`
+declared an a dependency through jboss-deployment-structure.xml is redeployed and all the dependent modules are `optional="true"` but present
+
+If you set optional to false or leave it out completely, then deployment happen correctly no matter the order.
 
 This seem to only happen under the following conditions:
 
@@ -14,7 +16,7 @@ This seem to only happen under the following conditions:
  1. Redeploy all applications with server running
  1. See App 2 fails. It becomes unavailable.
 
-This can slo be triggers using the deployment triggers:
+This can also be triggers using the deployment triggers:
 
 This seems to work fine:
 ```
