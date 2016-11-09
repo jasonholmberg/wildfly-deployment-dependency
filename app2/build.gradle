@@ -1,4 +1,5 @@
 
 dependencies {
   providedCompile project(':app1')
+  providedCompile project(':app3')
 }

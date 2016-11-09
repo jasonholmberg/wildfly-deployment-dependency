@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<datasources>
+    <xa-datasource jndi-name="java:jboss/datasources/App2XADS" pool-name="App2XADS">
+        <xa-datasource-property name="URL">
+            jdbc:h2:mem:app2
+        </xa-datasource-property>
+        <driver>h2</driver>
+        <xa-pool>
+            <min-pool-size>10</min-pool-size>
+            <max-pool-size>20</max-pool-size>
+            <prefill>true</prefill>
+        </xa-pool>
+        <security>
+            <user-name>sa</user-name>
+            <password>sa</password>
+        </security>
+    </xa-datasource>
+</datasources>

@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<persistence 
-    version="2.1" 
-    xmlns="http://xmlns.jcp.org/xml/ns/persistence" 
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
-    <persistence-unit name="MyPU" transaction-type="JTA">
+<persistence
+        version="2.1"
+        xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+    <persistence-unit name="MyApp2PU" transaction-type="JTA">
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+
+        <jta-data-source>java:jboss/datasources/App2XADS</jta-data-source>
+
         <properties>
-<!--            <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
-            <property name="javax.persistence.schema-generation.create-source" value="script"/> 
-            <property name="javax.persistence.schema-generation.drop-source" value="script"/> 
-            <property name="javax.persistence.schema-generation.create-script-source" value="META-INF/create.sql"/> 
-            <property name="javax.persistence.schema-generation.drop-script-source" value="META-INF/drop.sql"/> 
-            <property name="javax.persistence.sql-load-script-source" value="META-INF/load.sql"/> 
-            <property name="eclipselink.logging.level" value="FINE"/> -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+            <property name="hibernate.max_fetch_depth" value="3"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
         </properties>
     </persistence-unit>
 </persistence>

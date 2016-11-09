@@ -15,7 +15,7 @@ subprojects {
     dependsOn war
     from "$buildDir/libs"
     include "*.war"
-    into "$wildflyHome/standalone/deployments"
+    into "$serverHome/standalone/deployments"
   }
   
 }

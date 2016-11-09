@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>  
+<?xml version="1.0" encoding="UTF-8"?>
 <jboss-deployment-structure xmlns="urn:jboss:deployment-structure:1.1">
-    <deployment>  
-         <dependencies>  
-              <module name="deployment.app1.war" />  
-        </dependencies>  
-    </deployment>  
+    <deployment>
+        <dependencies>
+            <module name="deployment.app1.war" optional="true"/>
+            <module name="deployment.app3.war" optional="true"/>
+        </dependencies>
+    </deployment>
 </jboss-deployment-structure> 

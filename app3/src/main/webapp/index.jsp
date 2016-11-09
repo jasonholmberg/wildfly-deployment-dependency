@@ -3,12 +3,9 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>App 2</title>
+    <title>App 3</title>
   </head>
   <body>
-    <h1>This is App 2</h1>
-    <div>${fromapp1}</div>
     <h1>This is App 3</h1>
-    <div>${fromapp3}</div>
   </body>
 </html>
